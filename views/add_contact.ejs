@@ -1,0 +1,20 @@
+<!-- ASSIGNMENT 2 - EXPRESS AUTHENTICATION, JOSHUA JHON EMMANUEL D. SOSA, 301323441, MARCH 2023 -->
+<%- include('partials/header', {title:'Add Contact'}); -%>
+<%- include('partials/top_nav') %>
+
+<main id="site-main">
+    <div class="container" style="width: 50%;">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/contactlist" class="standardcolor"><i class="fas mt-5 fa-angle-double-left"></i> Current Contact/s</a>
+           </div>
+        </div>
+        <div class="form-title text-center mb-3">
+            <h2>Register Contact</h2>
+            <span>Please fill out the form below to register new account</span>
+        </div>
+        <%- include('partials/_form') %>
+    </div>
+</main>
+
+<%- include('partials/bottom_nav'); -%>

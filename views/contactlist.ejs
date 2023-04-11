@@ -1,0 +1,33 @@
+<!-- ASSIGNMENT 2 - EXPRESS AUTHENTICATION, JOSHUA JHON EMMANUEL D. SOSA, 301323441, MARCH 2023 -->
+<%- include('partials/header', {title:'Contact List'}); -%>
+<%- include('partials/top_nav') %>
+
+<!-- REGISTER NEW CONTACT -->
+<main id="site-main">
+    <div class="container my-5">
+        <div class="box-nav d-flex justify-between mb-3">
+            <a href="/add-contact" class="border-shadow">
+                <span class="standardcolor">New Contact <i class="fas fa-user"></i></span>
+            </a>
+        </div>
+
+<!-- HANDLE TABLE -->
+<form action="/" method="POST">
+    <table class="table table-hover text-center">
+        <tr class="text-dark">
+            <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Number</th>
+                <th scope="col">Action</th>
+        </tr>
+    <tbody>
+        <%- include('partials/_show') %>
+    </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+
+<%- include('partials/bottom_nav'); -%>
+<%- include('partials/footer'); -%>

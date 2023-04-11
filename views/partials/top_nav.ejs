@@ -1,0 +1,72 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #9ccc2c;">
+    <div class="container-fluid">
+      <a href="/home">
+        <img src="/Assets/images/logo.jpeg" width="100" height="70" alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          
+          <% if(title == "Home"){ %>
+            <li class="nav-item mx-2 active">
+          <%} else { %>
+            <li class="nav-item mx-2">
+          <%} %>
+            <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-house-chimney"></i> Home</a>
+          </li>
+
+          <% if (isAuthenticated){ %>
+            <% if(title == "About"){ %>
+              <li class="nav-item mx-2 active">
+            <%} else { %>
+              <li class="nav-item mx-2">
+            <%} %>
+              <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-address-card"></i> About Me</a>
+            </li>
+            <% if(title == "Projects"){ %>
+              <li class="nav-item mx-2 active">
+            <%} else { %>
+              <li class="nav-item mx-2">
+            <%} %>
+              <a class="nav-link" aria-current="page" href="/projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+            </li>
+            <% if(title == "Services"){ %>
+              <li class="nav-item mx-2 active">
+            <%} else { %>
+              <li class="nav-item mx-2">
+            <%} %>
+              <a class="nav-link" aria-current="page" href="/services"><i class="fa-brands fa-servicestack"></i> Services</a>
+            </li>
+          <% } %>
+
+          <% if (isAuthenticated){ %>
+            <% if(title == "ContactList"){ %>
+              <li class="nav-item mx-2 active">
+            <%} else { %>
+              <li class="nav-item mx-2">
+            <%} %>
+              <a class="nav-link" aria-current="page" href="/contactlist"><i class="fa-solid fa-address-book"></i> Contact List</a>
+            </li>
+          <% } %>
+
+          <% if(title == "Contact"){ %>
+            <li class="nav-item mx-2 active">
+          <%} else { %>
+            <li class="nav-item mx-2">
+          <%} %>
+            <a class="nav-link" aria-current="page" href="/contact"><i class="fa-solid fa-address-book"></i> Contact Me</a>
+          </li>
+
+          <% if (isAuthenticated){ %>
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="/logout"><i class="fa-solid fa-right-to-bracket"></i> Logout</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+            </li>
+        <% } %>
+        
+      </ul>
+    </div>
+  </div>
+</nav>

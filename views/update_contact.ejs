@@ -1,0 +1,40 @@
+<!-- ASSIGNMENT 2 - EXPRESS AUTHENTICATION, JOSHUA JHON EMMANUEL D. SOSA, 301323441, MARCH 2023 -->
+<%- include('partials/header', {title:'Update Contact'}); -%>
+<%- include('partials/top_nav') %>
+
+ 
+<main id="site-main">
+  <div class="container" style="width: 50%;">
+      <div class="box-nav d-flex justify-between">
+         <div class="filter">
+             <a href="/contactlist" class="standardcolor"><i class="fas fa-angle-double-left mt-5"></i> All Users</a>
+         </div>
+      </div>
+      <div class="form-title text-center">
+          <h2>Update Contact</h2>
+          <span>Use the below form to update information</span>
+      </div>
+
+      <form method="POST" id="update_contact" class="mb-5">
+          <div class="form-group new_contact">
+              <label>Name</label>
+              <input type="hidden" name="id" value="<%= contact._id %>">
+              <input type="text" class="form-control" name="name" value="<%= contact.name %>" required>
+            </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" value="<%= contact.email%>" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          </div>
+          <div class="form-group">
+            <label>Contact Number</label>
+            <input type="tel" class="form-control" name="number" value="<%= contact.number%>" required>
+          </div>
+          <div class="form-group">
+              <button type="submit" class="btn bgstandardcolor text-light" style="margin-top: 10px;">Save</button>
+          </div>
+        </form>  
+  </div>
+</main>
+
+<%- include('partials/bottom_nav'); -%>
+<%- include('partials/footer'); -%>
